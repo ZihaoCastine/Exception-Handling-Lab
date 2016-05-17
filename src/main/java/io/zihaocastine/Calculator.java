@@ -17,10 +17,10 @@ public class Calculator {
         return num1 * num2;
     }
 
-    public static double divide(int num1, int num2)throws ArithmeticException{
+    public static double divide(int num1, int num2)throws DivisionByZeroException{
         double total=0;
         if(num2==0){
-            throw new ArithmeticException("Can't divide by zero");
+            throw new DivisionByZeroException();
         }
         total= num1/num2;
         return total;

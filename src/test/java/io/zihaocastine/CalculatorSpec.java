@@ -13,8 +13,8 @@ public class CalculatorSpec {
         Assert.assertEquals(expectedValue, add(2,2));
     }
 
-    @Test(expected = ArithmeticException.class)
-    public void testDivide(){
+    @Test(expected = DivisionByZeroException.class)
+    public void testDivide() throws DivisionByZeroException {
         Calculator c= new Calculator();
         divide(1,0);
     }
