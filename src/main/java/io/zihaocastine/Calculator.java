@@ -22,9 +22,19 @@ public class Calculator {
         if(num2==0){
             throw new DivisionByZeroException();
         }
-        total= num1/num2;
+        total= (double)num1/num2;
         return total;
     }
+
+    public static double squareRoot(int num)throws ComplexNumberException{
+        if(num<0){
+            throw new ComplexNumberException();
+        }
+        return Math.sqrt(num);
+    }
+
+
+
 
 
 }
