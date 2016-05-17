@@ -19,6 +19,9 @@ public class Calculator {
 
     public static double divide(int num1, int num2)throws ArithmeticException{
         double total=0;
+        if(num2==0){
+            throw new ArithmeticException("Can't divide by zero");
+        }
         total= num1/num2;
         return total;
     }
